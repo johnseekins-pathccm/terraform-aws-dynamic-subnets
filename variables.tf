@@ -102,6 +102,20 @@ variable "ipv6_enabled" {
   nullable    = false
 }
 
+variable "disable_private_ipv6" {
+  type        = bool
+  description = "Set `true` to disable IPv6 addresses in private subnets"
+  default     = false
+  nullable    = false
+}
+
+variable "disable_public_ipv6" {
+  type        = bool
+  description = "Set `true` to disable IPv6 addresses in public subnets"
+  default     = false
+  nullable    = false
+}
+
 variable "ipv4_cidr_block" {
   type        = list(string)
   description = <<-EOT
